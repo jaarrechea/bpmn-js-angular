@@ -1,0 +1,20 @@
+<div #container class="diagram-container">
+  <div #diagram class="canvas"></div>
+  <div #panelProperties id="properties-panel" class="panel-properties"></div>
+
+</div>
+<ul class="buttons">
+  <li>
+    download
+  </li>
+  <li>
+    <a #downloadDiagram href title="download BPMN diagram" (click)="saveDiagram()">
+      BPMN diagram
+    </a>
+  </li>
+  <li>
+    <a #downloadSvg href title="download as SVG image">
+      SVG image
+    </a>
+  </li>
+</ul>

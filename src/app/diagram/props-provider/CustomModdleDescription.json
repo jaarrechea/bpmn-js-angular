@@ -1,0 +1,34 @@
+{
+  "name": "customModdle",
+  "uri": "http://example.com/custom-moddle",
+  "prefix": "custom",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "associations": [],
+  "types": [
+    {
+      "name": "ExtUserTask",
+      "extends": [
+        "bpmn:Task"
+      ],
+      "properties": [
+        {
+          "name": "myData",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "country",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "colour",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}

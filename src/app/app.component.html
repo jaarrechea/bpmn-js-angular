@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-11">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="col" style="margin: 10px;">
+    <select #langSelect (ngModelChange)="selectLanguage($event)" [(ngModel)]=language >
+      <option *ngFor="let lang of languages" [ngValue]="lang.code">{{lang.name}}</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 diagram-parent">
+    <app-diagram [url]="diagramUrl" [language]="language" (importDone)="handleImported($event)"></app-diagram>
+
+    <div class="import-error" *ngIf="importError">
+      <strong>Failed to render diagram: </strong>
+      {{ importError.message }}
+    </div>
+  </div>
+</div>
